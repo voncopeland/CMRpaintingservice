@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CMR Painting Service</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+      line-height:1.6;
+    }
+
+    /* GATOR THEME COLORS */
+    :root{
+      --blue:#0021a5;
+      --orange:#fa4616;
+    }
+
+    header{
+      background:var(--blue);
+      color:white;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo-text{
+      font-size:2rem;
+      font-weight:bold;
+      letter-spacing:3px;
+    }
+
+    /* CHRISTIAN CROSS MADE OF PAINT BRUSHES */
+    .cross-logo{
+      position:relative;
+      width:60px;
+      height:60px;
+    }
+
+    .brush{
+      position:absolute;
+      background:var(--orange);
+      border-radius:10px;
+    }
+
+    .brush.vertical{
+      width:14px;
+      height:60px;
+      left:23px;
+      top:0;
+    }
+
+    .brush.horizontal{
+      width:60px;
+      height:14px;
+      left:0;
+      top:23px;
+    }
+
+    /* HERO */
+    .hero{
+      height:90vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:4rem;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:1.3rem;
+      max-width:700px;
+      margin:auto;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:var(--orange);
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#d93b10;
+    }
+
+    section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:2.5rem;
+      color:#111;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:white;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .service-card h3{
+      margin-bottom:15px;
+      color:var(--blue);
+    }
+
+    /* ABOUT */
+    .about{
+      background:var(--blue);
+      color:white;
+      border-radius:12px;
+      padding:50px;
+      text-align:center;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:1.1rem;
+    }
+
+    footer{
+      background:var(--blue);
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+      .hero-content h1{
+        font-size:2.5rem;
+      }
+
+      .hero-content p{
+        font-size:1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="cross-logo">
+        <div class="brush vertical"></div>
+        <div class="brush horizontal"></div>
+      </div>
+
+      <div class="logo-text">CMR</div>
+    </div>
+
+    <nav>
+      <a href="#services" class="btn">Our Services</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Copeland, Mills & Ross Painting Service</h1>
+
+      <p>
+        Professional painting services in Gainesville, Florida.
+        Clean work. Quality finishes. Reliable results.
+      </p>
+
+      <a href="#contact" class="btn">Get A Free Quote</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+      <div class="service-card">
+        <h3>Interior Painting</h3>
+        <p>
+          Smooth, professional interior painting for homes,
+          apartments, offices, and more.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Commercial Projects</h3>
+        <p>
+          Reliable painting solutions for businesses,
+          storefronts, and commercial properties.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="about">
+      <h2 class="section-title" style="color:white;">About CMR</h2>
+
+      <p>
+        CMR Painting Service is a family-run business based in Gainesville, Florida.
+        We take pride in delivering clean, high-quality painting work with honesty,
+        craftsmanship, and care for every home and business we serve.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <p><strong>Phone:</strong> 352 575 4954</p>
+    <p><strong>Email:</strong> contact@cmrpainting.com</p>
+    <p><strong>Location:</strong> Gainesville, Florida</p>
+
+    <br>
+
+    <a href="mailto:contact@cmrpainting.com" class="btn">
+      Email Us
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 CMR Copeland, Mills & Ross Painting Service</p>
+  </footer>
+
+</body>
+</html>
